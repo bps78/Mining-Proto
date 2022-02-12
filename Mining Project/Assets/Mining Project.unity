@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 59279830}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -8.552826, y: 3, z: 0.24546432}
-  m_LocalScale: {x: 2.6967998, y: 1.9780924, z: 4.663846}
+  m_LocalScale: {x: 1.7978667, y: 1.9780924, z: 3.1092308}
   m_Children: []
   m_Father: {fileID: 1363287435}
   m_RootOrder: 0
@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 154347096}
   - component: {fileID: 154347101}
   - component: {fileID: 154347100}
+  - component: {fileID: 154347102}
   m_Layer: 0
   m_Name: RockBlue
   m_TagString: Untagged
@@ -343,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 154347095}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 3.146183, y: 3, z: -3.970316}
-  m_LocalScale: {x: 2.6967998, y: 1.9780924, z: 4.663846}
+  m_LocalScale: {x: 1.797866, y: 1.978092, z: 3.109232}
   m_Children: []
   m_Father: {fileID: 1890452663}
   m_RootOrder: 0
@@ -379,6 +380,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.213229, y: 0.5244057, z: 1.670324}
   m_Center: {x: 0, y: 0.4173248, z: 0}
+--- !u!114 &154347102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154347095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c929e830c3b32419246e3a891a9f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 154347095}
 --- !u!1 &176661842
 GameObject:
   m_ObjectHideFlags: 0
@@ -16475,11 +16489,10 @@ MonoBehaviour:
   redRock: {fileID: 1363287434}
   greenRock: {fileID: 1474829411}
   xLow: -35
-  xHigh: 35
+  xHigh: 37
   zLow: -35
-  zHigh: 35
+  zHigh: 37
   spawnReps: 3
-  gap: 5
 --- !u!1 &1890452661
 GameObject:
   m_ObjectHideFlags: 0
@@ -16620,7 +16633,7 @@ Transform:
   m_GameObject: {fileID: 2057902041}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 11.447176, y: 3, z: 0.24546432}
-  m_LocalScale: {x: 2.6967993, y: 1.9780924, z: 4.663846}
+  m_LocalScale: {x: 1.797866, y: 1.9780924, z: 3.1092308}
   m_Children: []
   m_Father: {fileID: 1474829412}
   m_RootOrder: 0

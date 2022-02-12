@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class stackedRockControl : MonoBehaviour
 {
+    public GameObject emptyRock;
+    public ParticleSystem parts;
+    public GameObject rock;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,10 @@ public class stackedRockControl : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay()
     {
-        if(collision.collider.name.Substring(0, 4) == "Rock")
-        {
-            Destroy(this);
-        }
+        System.Console.WriteLine("cool");
     }
+
+
 }

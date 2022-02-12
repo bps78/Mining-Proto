@@ -14,11 +14,14 @@ public class greenMining : MonoBehaviour
 
     private float totGreen = 0;
 
+    Vector3 ogSize;
+
     // Start is called before the first frame update
     void Start()
     {
         greenParts.Pause();
         PlayerPrefs.SetFloat("Total Green", 0);
+        ogSize = greenRock.transform.localScale;
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class greenMining : MonoBehaviour
             greenParts.enableEmission = false;
         }
         checkMined();
+        greenRock.transform.localScale = new Vector3((float)ogSize.x * ((2.5f - timeMine) / 2.5f) + 1, (float)ogSize.y, (float)ogSize.z * ((2.5f - timeMine) / 2.5f) + 1);
     }
 
     private void OnTriggerEnter(Collider other)

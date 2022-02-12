@@ -13,8 +13,7 @@ public class spawnManager : MonoBehaviour
   
 
 
-    // This determines how close the rocks will be allowed to be to each other when spawned
-    public float gap;
+    
 
 
     // Start is called before the first frame update
@@ -54,7 +53,7 @@ public class spawnManager : MonoBehaviour
     //Generates a random coordinate
     Vector3 genCord()
     {
-        return new Vector3(Random.Range(xLow, xHigh), (float)-2.7, Random.Range(xLow, xHigh));
+        return new Vector3(Random.Range(xLow, xHigh), (float)-2.7, Random.Range(zLow, zHigh));
     }
 
 

@@ -13,15 +13,15 @@ public class blueMining : MonoBehaviour
     public ParticleSystem blueParts;
 
     private float totBlue = 0;
-   
-    
+
+    Vector3 ogSize;
 
     // Start is called before the first frame update
     void Start()
     {
         blueParts.Pause();
         PlayerPrefs.SetFloat("Total Blue", 0);
-        
+        ogSize = blueRock.transform.localScale;
     }
 
     // Update is called once per frame
@@ -51,6 +51,8 @@ public class blueMining : MonoBehaviour
         }
         
         checkMined();
+
+        blueRock.transform.localScale = new Vector3((float)ogSize.x * ((5 - timeMine) / 5) + 1, (float)ogSize.y , (float)ogSize.z * ((5 - timeMine) / 5) + 1);
     }
 
     private void OnTriggerEnter(Collider other)

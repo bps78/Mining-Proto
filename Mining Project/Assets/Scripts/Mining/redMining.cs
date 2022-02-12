@@ -13,13 +13,15 @@ public class redMining : MonoBehaviour
     public ParticleSystem redPart;
 
     private float totRed = 0;
-    
+
+    Vector3 ogSize;
 
     // Start is called before the first frame update
     void Start()
     {
         redPart.Pause();
         PlayerPrefs.SetFloat("Total Red", 0);
+        ogSize = redRock.transform.localScale;
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class redMining : MonoBehaviour
             redPart.enableEmission = false;
         }
         checkMined();
+        redRock.transform.localScale = new Vector3((float)ogSize.x * ((7.5f - timeMine) / 7.5f) + 1, (float)ogSize.y, (float)ogSize.z * ((7.5f - timeMine) / 7.5f) + 1);
     }
 
     private void OnTriggerEnter(Collider other)

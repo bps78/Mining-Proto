@@ -9,9 +9,8 @@ public class spawnManager : MonoBehaviour
     public GameObject redRock;
     public GameObject greenRock;
     public float xLow, xHigh, zLow, zHigh;
-    float[] zCords = new float[9];
-    float[] xCords = new float[9];
-    int index = 0;
+    public int spawnReps;
+  
 
 
     // This determines how close the rocks will be allowed to be to each other when spawned
@@ -22,41 +21,27 @@ public class spawnManager : MonoBehaviour
     void Start()
     {
         //Time loop repeats determines how many of each rock
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < spawnReps; i++)
         {
             //Creation of Blue clones
-            float xCord = generateX();
-            float zCord = generateZ();
-            xCords[index] = xCord;
-            zCords[index] = zCord;
-            index++;
-            Vector3 bluePosition = new Vector3(xCord, blueRock.transform.position.y, zCord);
             
+            Vector3 bluePosition = genCord();
+
 
             Instantiate(blueRock, bluePosition, blueRock.transform.rotation);
 
 
             //Creation of Red clones
-            float xCordRed = generateX();
-            float zCordRed = generateZ();
-            xCords[index] = xCordRed;
-            zCords[index] = zCordRed;
-            index++;
-            Vector3 redPosition = new Vector3(xCordRed, redRock.transform.position.y, zCordRed);
-            
+          
+            Vector3 redPosition = genCord();
+
 
             Instantiate(redRock, redPosition, redRock.transform.rotation);
 
 
             //Creation of Green clones
-            float xCordGreen = generateX();
-            float zCordGreen = generateZ();
 
-            xCords[index] = xCordGreen;
-            zCords[index] = zCordGreen;
-            index++;
-
-            Vector3 greenPosition = new Vector3(xCordGreen, redRock.transform.position.y, zCordGreen);
+            Vector3 greenPosition = genCord();
            
 
             Instantiate(greenRock, greenPosition, greenRock.transform.rotation);
@@ -66,59 +51,14 @@ public class spawnManager : MonoBehaviour
         Destroy(greenRock);
     }
 
-    //This method checks to make sure that x cords dont intersect and corrects it if they do
-    float generateX()
+    //Generates a random coordinate
+    Vector3 genCord()
     {
-        float newX = Random.Range(xLow, xHigh);
-        while (isOverlappingX(newX, xCords))
-        {
-            newX = Random.Range(xLow, xHigh);
-        }
-
-
-        return newX;
-    }
-
-    //This method checks to make sure that z cords dont intersect and corrects it if they do
-    float generateZ()
-    {
-
-        float newZ = Random.Range(zLow, zHigh);
-        while (isOverlappingZ(newZ, zCords))
-        {
-            newZ = Random.Range(zLow, zHigh);
-        }
-
-
-        return newZ;
+        return new Vector3(Random.Range(xLow, xHigh), (float)-2.7, Random.Range(xLow, xHigh));
     }
 
 
-    //This method returns a bool value that represents if the param is within the gap distance of an existing cord
-    bool isOverlappingZ(float newZ, float[] zCords)
-    {
-        foreach(float cur in zCords){
-            if(Mathf.Abs(newZ - cur) <= gap)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
 
-
-    //This method returns a bool value that represents if the param is within the gap distance of an existing cord
-    bool isOverlappingX(float newX, float[] xCords)
-    {
-        foreach (float cur in xCords)
-        {
-            if (Mathf.Abs(newX - cur) <= gap)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
 
 
     // Update is called once per frame

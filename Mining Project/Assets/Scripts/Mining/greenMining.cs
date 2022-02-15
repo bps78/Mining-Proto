@@ -47,6 +47,7 @@ public class greenMining : MonoBehaviour
             greenParts.enableEmission = false;
         }
         checkMined();
+        //Size Control
         greenRock.transform.localScale = new Vector3((float)ogSize.x * ((2.5f - timeMine) / 2.5f) + 1, (float)ogSize.y, (float)ogSize.z * ((2.5f - timeMine) / 2.5f) + 1);
     }
 

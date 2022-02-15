@@ -51,7 +51,7 @@ public class blueMining : MonoBehaviour
         }
         
         checkMined();
-
+        //Size Control
         blueRock.transform.localScale = new Vector3((float)ogSize.x * ((5 - timeMine) / 5) + 1, (float)ogSize.y , (float)ogSize.z * ((5 - timeMine) / 5) + 1);
     }
 

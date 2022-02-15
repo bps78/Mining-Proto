@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\destroyRock.cs" />
     <Compile Include="Assets\Scripts\Set Text\setRedText.cs" />
     <Compile Include="Assets\Scripts\fpsCamera.cs" />
+    <Compile Include="Assets\Scripts\animControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

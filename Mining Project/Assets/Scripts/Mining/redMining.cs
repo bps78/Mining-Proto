@@ -47,6 +47,7 @@ public class redMining : MonoBehaviour
             redPart.enableEmission = false;
         }
         checkMined();
+        //Size Control
         redRock.transform.localScale = new Vector3((float)ogSize.x * ((7.5f - timeMine) / 7.5f) + 1, (float)ogSize.y, (float)ogSize.z * ((7.5f - timeMine) / 7.5f) + 1);
     }
 

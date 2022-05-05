@@ -70,6 +70,7 @@ public class redMining : MonoBehaviour
 
             totRed = PlayerPrefs.GetFloat("Total Red");
             PlayerPrefs.SetFloat("Total Red", totRed + 1);
+            
 
             redPart.enableEmission = false;
         }

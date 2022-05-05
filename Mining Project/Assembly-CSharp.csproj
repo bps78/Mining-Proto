@@ -58,8 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\spawnManager.cs" />
     <Compile Include="Assets\Scripts\Mining\redMining.cs" />
+    <Compile Include="Assets\Scripts\Set Text\setMoneyText.cs" />
     <Compile Include="Assets\Scripts\Set Text\setBlueText.cs" />
     <Compile Include="Assets\Scripts\Mining\blueMining.cs" />
+    <Compile Include="Assets\Scripts\animControl.cs" />
+    <Compile Include="Assets\Scripts\shopTrigger.cs" />
     <Compile Include="Assets\Scripts\charController.cs" />
     <Compile Include="Assets\Scripts\fpsRotation.cs" />
     <Compile Include="Assets\Scripts\stackedRockControl.cs" />
@@ -68,13 +71,11 @@
     <Compile Include="Assets\Scripts\destroyRock.cs" />
     <Compile Include="Assets\Scripts\Set Text\setRedText.cs" />
     <Compile Include="Assets\Scripts\fpsCamera.cs" />
-    <Compile Include="Assets\Scripts\animControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
